@@ -1,5 +1,5 @@
 from threading import Thread, Lock
-from stdin_interafce import FileInt
+from src.stdin_interface import FileInt
 
 def hede(params):
     return params
@@ -18,5 +18,3 @@ class Script(FileInt):
 
         t = Thread(target = function, args = (params,))
         t.start()
-
-obj = Script()._tail("stdin.py", 10)._head(3)
