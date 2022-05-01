@@ -1,4 +1,5 @@
 import sys
+import numpy as np
 import contextlib
 
 class StdInHandler():
@@ -28,9 +29,21 @@ class CountLines(StdInHandler):
         return result
 
 class Unique(StdInHandler):
+
+    def __init__(self, inputValue=None):
+        self.inputValue = inputValue
+        super().__init__()
+
     def _unique(self):
-        listInput = list(self.STDIN)
-        tmpList = list(dict.fromkeys(listInput))
-        unique = [x for i, x in enumerate(tmpList) if i == tmpList.index(x)]
+        tmpList = []
+        if self.inputValue is not None:
+            listInput = self.inputValue
+        else:
+            listInput = self.STDIN
+
+        for data in listInput:
+            tmpList.append(data)
+
+        unique = np.unique(np.array(tmpList))
 
         return unique
