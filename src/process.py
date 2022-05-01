@@ -19,4 +19,4 @@ class Script(FileInt):
         t = Thread(target = function, args = (params,))
         t.start()
 
-obj = Script()._tail("stdin.py", 1)._unique()
+obj = Script()._tail("stdin.py", 10)._head(3)

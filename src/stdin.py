@@ -53,26 +53,31 @@ class File(object):
         pass
 
     def tail(self, fileName, n):
+        output_list = []
         content = open("{}".format(fileName))
         lines = content.read().splitlines()
         
         
         if n == 1:
             print(lines[n])
+            output_list.append(lines[n])
         elif n > 1:
             lines = lines[-int(n):]
             for line in lines:
-                print(line)
+                output_list.append(line)
         
-        return lines
+        return output_list
 
-    def head(self, fileName, n):
-        content = open("{}".format(fileName))
-        lines = content.read().splitlines()
+    def head(self, n):
 
+        content = self.STDIN
+
+        lines = list(content)
         if n == 1:
             print(lines[n])
         elif n > 1:
             lines = lines[:int(n)]
             for line in lines:
                 print(line)
+
+        return lines

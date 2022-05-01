@@ -11,8 +11,8 @@ class FileInt(File, Unique, StdInHandler):
 
         return self
 
-    def _unique(self):
-
-        data = self.unique()
+    def _head(self, n):
+        
+        data = self.head(n)
         self.STDIN = data
         return self
