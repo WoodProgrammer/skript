@@ -1,5 +1,5 @@
 # skript
-Skript is wrapper of the shell command to use them in Python3.x.
+Skript is wrapper of the shell command to use them in Python3.x.This wrapper allows system administrations easily develop shell scripts the person who familiar with Python3.x
 
 Inspired from ; https://github.com/bitfield/script
 
@@ -24,5 +24,7 @@ Supported UNIX/Shell command allows you to use pipe the outputs between function
 | head   | _head  :white_check_mark: | 
 | wc -l   | _unique  :warning: | 
 | unique   | _unique  :warning: | 
-| exec   | _exec  :warning: | 
-| find   | _exec  :warning: | 
+| exec   | _exec  TODO | 
+| find   | find  TODO |
+| grep   | _exec  TODO |
+| kubectl -o jsonpath  | _kubectl  TODO |
