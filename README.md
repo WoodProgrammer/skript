@@ -22,7 +22,7 @@ Supported UNIX/Shell command allows you to use pipe the outputs between function
 | cat      | _cat  :white_check_mark:     |
 | tail   | _tail   :white_check_mark:     |
 | head   | _head  :white_check_mark: | 
-| wc -l   | _unique  :warning: | 
+| wc -l   | _wordcount  :white_check_mark: | 
 | unique   | _unique  :warning: | 
 | exec   | _exec  TODO | 
 | find   | find  TODO |
